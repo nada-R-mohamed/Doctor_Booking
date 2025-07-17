@@ -28,6 +28,23 @@ A RESTful API built with **Laravel 12** to manage online appointment bookings fo
 - Fully RESTful API (no Blade)
 
 ---
+---
+
+## 📬 API Endpoints (Overview)
+
+| Method | Endpoint                              | Description                     | Auth |
+|--------|---------------------------------------|---------------------------------|------|
+| POST   | /api/appointments                     | Create new appointment (guest) | ❌   |
+| POST   | /api/login                            | Doctor login (token)           | ❌   |
+| GET    | /api/appointments                     | List all appointments          | ✅   |
+| GET    | /api/appointments?status=pending      | Filter appointments by status  | ✅   |
+| PATCH  | /api/appointments/{id}                | Approve or reject appointment  | ✅   |
+| DELETE | /api/appointments/{id}                | Delete appointment             | ✅   |
+| GET    | /api/appointments/export/pdf          | Export appointments as PDF     | ✅   |
+| GET    | /api/appointments/export/excel        | Export appointments as Excel   | ✅   |
+| GET    | /api/notifications                    | List unread notifications      | ✅   |
+| PATCH  | /api/notifications/{id}/read          | Mark notification as read      | ✅   |
+
 
 ## 📦 Installation
 
